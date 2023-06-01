@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+<head>
+    <title>Plan Poker</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/style.css" rel="stylesheet">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="/script.js" defer></script>
+</head>
+<body class="d-flex h-100 text-center text-white bg-dark">
+
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="mb-auto">
+        <div>
+            <img class="float-md-start mb-0" style="height:20px;" src="logo.svg">
+<!--            <h3 class="float-md-start mb-0">PlanPoker</h3>-->
+            <nav class="nav nav-masthead justify-content-center float-md-end">
+
+            </nav>
+        </div>
+    </header>
+
+    <main id="welcome" class="px-3">
+        <h1>Welcome!</h1>
+        <p class="lead">This tool is intended for personal use and educational purposes only.<br>It should not be used for any activities that may infringe upon intellectual property rights, and the user assumes full responsibility for its usage.</p>
+        <form class="mt-3">
+            <p class="lead">
+                <input id="nameVoter" name="name" type="text" class="form-control w-50 mx-auto" placeholder="enter your name" required>
+            </p>
+            <p class="lead">
+                <button id="connect" href="#" class="btn btn-lg border-white btn-outline-light">Start</button>
+            </p>
+        </form>
+    </main>
+
+    <main id="casino" class="px-3" style="display: none;">
+        <div class="poker-room">
+            <div class="poker-table">
+                <p>Pick your card!</p>
+                <button id="reveal" class="btn btn-outline-light">Reveal!</button>
+                <button id="reset" class="btn btn-outline-warning" style="display: none;">Reset!</button>
+            </div>
+            <div id="north" class="seats-top"></div>
+            <div id="south" class="seats-bottom"></div>
+            <div id="east" class="seats-left"></div>
+            <div id="west" class="seats-right"></div>
+        </div>
+    </main>
+
+
+    <footer class="mt-auto text-white-50">
+
+        <ul id="cardSet" class="card-set"></ul>
+        <div id="results" class="text-info" style="display: none;">
+            <h5>Average:</h5>
+            <h1 id="average">0</h1>
+        </div>
+
+        <p>By <a class="text-light text-decoration-none" href="http://redouan.net">Redouan Kacimi</a></p>
+
+    </footer>
+</div>
+
+
+
+</body>
+
+</body>
+</html>
